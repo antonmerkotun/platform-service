@@ -1,7 +1,7 @@
 export namespace IAccounts {
   export interface BaseModel {
     firstName: string;
-    lastName: string;
+    lastName: string | null;
     email: string;
     isVerifiedEmail: boolean;
     picture: string;

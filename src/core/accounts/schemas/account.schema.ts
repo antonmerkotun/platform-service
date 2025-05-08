@@ -17,8 +17,8 @@ export class Account implements IAccounts.Model {
   @Prop({ required: true })
   firstName: string;
 
-  @Prop({ required: true })
-  lastName: string;
+  @Prop({ required: false, default: null })
+  lastName: string | null;
 
   @Prop({ type: Boolean })
   isVerifiedEmail: boolean;

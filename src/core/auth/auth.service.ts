@@ -145,22 +145,18 @@ export class AuthService {
   private _createAccessToken({
     accountId,
   }: IAuthService.CreateAccessToken.Parameters): string {
-    const accessToken = this._JwtService.sign(
+    return this._JwtService.sign(
       { accountId, type: 'access' },
       { expiresIn: '30m' },
     );
-
-    return accessToken;
   }
 
   private _createRefreshToken({
     accountId,
   }: IAuthService.CreateRefreshToken.Parameters): string {
-    const refreshToken = this._JwtService.sign(
+    return this._JwtService.sign(
       { accountId, type: 'refresh' },
       { expiresIn: '30d' },
     );
-
-    return refreshToken;
   }
 }
