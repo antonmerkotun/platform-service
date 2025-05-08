@@ -22,9 +22,9 @@ export namespace IAccounts {
       ADMIN = 'admin',
     }
   }
-
-  export enum AuthMethods {
-    Token = 'token',
-    Password = 'password',
-  }
+  //
+  // export enum AuthMethods {
+  //   Token = 'token',
+  //   Password = 'password',
+  // }
 }
